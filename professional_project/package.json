@@ -1,0 +1,15 @@
+{
+  "name": "professional_project",
+  "version": "1.0.0",
+  "description": "backend professional project",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "M.usama",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
