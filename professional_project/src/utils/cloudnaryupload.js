@@ -7,7 +7,7 @@ cloudinary.config({
     api_secret : "process.env.CLOUDINARY_API_SECRET"
 });
 
-const iploadOnCloudinary = async (localfilepath) => {
+const uploadOnCloudinary = async (localfilepath) => {
     try {
         if(!localfilepath) return null
     // upload the file on cloudinary
@@ -21,9 +21,8 @@ const iploadOnCloudinary = async (localfilepath) => {
     } catch (error) {
         fs.unlinkSync(localfilepath); // remove the locally saved
         //  temporary file as the uploaded
+        return null
     }
 }
 
-cloudinary.v2.uploader.upload({
-
-})
+export {uploadOnCloudinary}
